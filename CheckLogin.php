@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Three Layer Div Block</title>
+<style>
+body{
+	 margin:0px;
+	}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background-color: #F1F3F4;
+}
+
+.banner {
+  width: 100%;
+  height: 120px;
+  background-color: navy;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#brainware{
+	color:yellow;
+	font-size:44px;
+	font-family:bookman old style;
+	padding-top:15px;
+	}
+
+.body {
+  width: 100%;
+  margin: 0px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-column {
+  width: 30%;
+  background-color: #D9DDE1; 
+  padding: 10px;
+  height:500px;
+  box-sizing: border-box;
+}
+
+.right-column {
+  width: 70%;
+  background-color:#F1F3F4; 
+  padding: 10px;
+  height:500px;
+  box-sizing: border-box;
+}
+
+.footer {
+  width: 100%;
+  height: 40px;
+  background-color: #f2f2f2;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.login-container {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+ color:#3e8e41;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color:#3e8e41;
+ font-size:18px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  width: 100%;
+  height: 40px;
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+#login_img{
+  width:99%;
+}
+
+#login_text{
+  text-align: center;
+  color: #3e8e41;
+}
+
+</style>
+
+
+</head>
+<body>
+  <div class="container">
+    <div class="banner">
+       <div id="brainware"> Brainware University EMS </div>
+    </div>
+    <div class="body">
+      <div class="left-column">
+        <h2 id="login_text"> Images <br> ... </h2>
+      </div>
+      <div class="right-column">
+      		<div class="login-container">
+    		<h1>Credential Checking </h1>
+		<?php
+			$aa=$_POST['username'];
+		 	$bb=$_POST['password'];
+
+				if( $aa == "admin" &&  $bb == "1234")
+				{
+				 echo "<h3> Login successfull </h3>";
+				echo "<a href='AddEmp.php'> Proceed</a>";
+				}
+				else{
+				echo "<h4> Invalid credential </h4>";
+				 echo "<a href='home.html'> Try Again </a>";
+				}
+	    		
+		?>
+  		</div>
+
+      </div>
+    </div>
+    <div class="footer">
+      <p> All copyright reserved with saugata @ 2025 </p>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
